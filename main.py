@@ -1,5 +1,15 @@
-from client import get_all_posts
+from client import *
 
-data = get_all_posts()
+print(get_post_by_id(1))
 
-print(data[:2])  # first 2 posts  
+new_post = {
+    "title": "New Post",
+    "body": "Testing",
+    "userId": 1
+}
+
+print(create_post(new_post))
+
+print(update_post(1, new_post))
+
+print(delete_post(1))
