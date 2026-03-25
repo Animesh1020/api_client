@@ -1,15 +1,10 @@
-from client import *
+from services import *
 
-print(get_post_by_id(1))
+print(fetch_all_posts()[:2])
+print(fetch_post(1))
 
-new_post = {
-    "title": "New Post",
-    "body": "Testing",
-    "userId": 1
-}
+print(create_new_post("Test", "Hello", 1))
 
-print(create_post(new_post))
+print(update_existing_post(1, "Updated", "Body", 1))
 
-print(update_post(1, new_post))
-
-print(delete_post(1))
+print(delete_existing_post(1))
