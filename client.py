@@ -1,8 +1,5 @@
-# client.py
-
 import requests
 from config import BASE_URL, HEADERS
-
 
 # GET all posts
 def get_all_posts():
@@ -14,7 +11,6 @@ def get_all_posts():
         print(f"Error: {e}")
         return None
 
-
 # GET post by ID
 def get_post_by_id(post_id):
     url = f"{BASE_URL}/posts/{post_id}"
@@ -24,7 +20,6 @@ def get_post_by_id(post_id):
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
         return None
-
 
 # POST (create new post)
 def create_post(data):
@@ -36,7 +31,6 @@ def create_post(data):
         print(f"Error: {e}")
         return None
 
-
 # PUT (update post)
 def update_post(post_id, data):
     url = f"{BASE_URL}/posts/{post_id}"
@@ -46,7 +40,6 @@ def update_post(post_id, data):
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
         return None
-
 
 # DELETE post
 def delete_post(post_id):

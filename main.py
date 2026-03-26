@@ -1,17 +1,13 @@
-# main.py
-
 from services import *
 
-
 def menu():
-    print("\n===== REST API CLIENT =====")
+    print("\n REST API CLIENT")
     print("1. Fetch all posts")
     print("2. Fetch post by ID")
     print("3. Create new post")
     print("4. Update post")
     print("5. Delete post")
     print("6. Exit")
-
 
 def main():
     while True:
@@ -50,7 +46,6 @@ def main():
 
         else:
             print("Invalid choice, try again")
-
 
 if __name__ == "__main__":
     main()
